@@ -2,12 +2,10 @@
 Object.prototype.myCall = function (callObj, ...params) {
     if (typeof this !== 'function')
         return "This is not a function"
-    console.log(typeof this, this)
     callObj.tempFunction = this;
     const result = callObj.tempFunction(...params);
     delete callObj.tempFunction;
     return result
-
 }
 //PolyFill end
 
